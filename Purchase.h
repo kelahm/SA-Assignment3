@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 using namespace std;
-
+//This class is responsible for making the actual purchase.
 class Purchase
 {
 	double total;
@@ -17,9 +17,7 @@ class Purchase
 	string getAddress();
 	char confirmPurchase();
 	void writeToStorage(string user, string item, int quantity, double price, double orderTotal, string ccn, string address);
-	//void updateInventory(string item, int quantity);
-	//int checkInventory(string item);
-
+	
 };
 
 Purchase :: Purchase()
@@ -52,12 +50,4 @@ void Purchase :: writeToStorage(string user, string item, int quantity, double p
 	myFile << user << "\t" << address << "\t" << item << "\t" << quantity << "\t" << price << "\t" << orderTotal << "\t" << ccn << endl;
 	myFile.close();
 }
-/*void Purchase :: updateInventory(string item, int quantity)
-{
-	
-}
 
-int Purchase :: checkInventory(string item)
-{
-	
-}*/
